@@ -38,6 +38,7 @@ bw_update <- theme_bw() +
 
 
 
+nitrate_plot <- ggplot(all)+
   geom_point(aes(x = Distance_from_shore, y = -depth,colour = all$Nitrate), size = 4)+
   scale_colour_distiller(name =legend, type = "seq", palette = "RdPu",trans = "reverse")+
   facet_wrap(. ~ Transect, strip.position = "top", ncol = 2)+
